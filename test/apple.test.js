@@ -1,12 +1,19 @@
 "use strict";
 
 import {expect} from "chai";
-import App from "../src/app.js";
+import NewsApp from "../src/apple.js";
 
-describe("newsApp", () => {
+describe("NewsApp", () => {
     it("shall exist", () => {
-        let newsApp = new newsApp();
+        let newsApp = new NewsApp();
 
         expect(newsApp).to.be.defined;
     });
+
+    it("shall have a max length of 10", () => {
+        let newsApp = new NewsApp();
+
+        expect(newsApp.maxLength).to.equal(10);
+    });
+
 });
